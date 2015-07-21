@@ -86,9 +86,9 @@ def trello_router():
             text = ""
             for i in checklist['checkItems']:
                 if i['state'] == "incomplete":
-                    text = text + ":white_circle: " + i['name'] + "\n"
+                    text = text + ":white_square: " + i['name'] + "\n"
                 else:
-                    text = text + ":ind:  " + i['name'] + "\n"
+                    text = text + ":white_check_mark:  " + i['name'] + "\n"
             print(text)
             if not card.slack_message_id:
                 url = "https://slack.com/api/chat.postMessage"
